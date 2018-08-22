@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <p>This is a list of wines</p>
+  <ul>
+    {% for wine in wines %}
+      <li><a href="{{ url_for('wine', index=wine.index) }}">{{ wine.designation }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
